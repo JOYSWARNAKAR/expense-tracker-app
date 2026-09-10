@@ -1,13 +1,10 @@
-
-import './App.css'
+import { useRoutes } from "react-router-dom";
+import { appRoutes } from "./routes/appRoutes";
 
 function App() {
 
-  return (
-    <div className="text-red-400">
-      App <i class="ri-wallet-3-line"></i>
-    </div>
-  )
+  const routes = useRoutes(appRoutes)
+  return routes
 }
 
 export default App
