@@ -1,7 +1,14 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthStore } from "../contexts/AuthContext";
 
 
 function Header() {
+
+  const data = useContext(AuthStore)
+  console.log(data);
+  
+
   return (
    <header className="flex justify-between items-center p-4">
     <h1 className="text-base font-bold">Expense Tracker App</h1>
