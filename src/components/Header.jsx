@@ -5,14 +5,22 @@ import { AuthStore } from "../contexts/AuthContext";
 
 function Header() {
 
-  const data = useContext(AuthStore)
-  console.log(data);
+  const {user} = useContext(AuthStore)
+  
   
 
   return (
    <header className="flex justify-between items-center p-4">
     <h1 className="text-base font-bold">Expense Tracker App</h1>
-    <Link to='/login' className="text-white bg-orange-500 px-4 py-2 rounded">Login</Link>
+
+    {
+      user ? (
+        <Link to='/dashboard' className="text-white bg-orange-500 px-4 py-2 rounded">DashBoard</Link>
+      ) : (
+        <Link to='/login' className="text-white bg-orange-500 px-4 py-2 rounded">Login</Link>
+      )
+    }
+
    </header>
   )
 }
