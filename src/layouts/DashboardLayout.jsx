@@ -11,6 +11,8 @@ function DashboardLayout() {
             <nav className="flex flex-col gap-2">
                 <Link to= '/dashboard' className="rounded-md px-3 py-2 text-sm text-emerald-100 hover:bg-white/10 hover:text-white">Overview</Link>
                 <Link to= '/dashboard/add-expense' className="rounded-md px-3 py-2 text-sm text-emerald-100 hover:bg-white/10 hover:text-white">Add Expense</Link>
+                <Link to= '/dashboard/manage-expense' className="rounded-md px-3 py-2 text-sm text-emerald-100 hover:bg-white/10 hover:text-white">Manage Expense</Link>
+                <Link to= '/dashboard/profile' className="rounded-md px-3 py-2 text-sm text-emerald-100 hover:bg-white/10 hover:text-white">Profile</Link>
             </nav>
             <Button text = 'Logout' />
         </aside>
